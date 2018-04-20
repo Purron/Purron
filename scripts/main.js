@@ -21,7 +21,7 @@ myImage.onclick = function () {
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 
-var iDO = function setUserName() {
+function setUserName() {
     "use strict";
     var myName = prompt('Please enter your name.');
     localStorage.setItem('name', myName);
@@ -35,5 +35,7 @@ if (!localStorage.getItem('name')) {
     myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
 }
 
-myButton.onclick = iDO;
+myButton.onclick = function () {
+    setUserName();
+}
 
